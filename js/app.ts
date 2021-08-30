@@ -3,27 +3,18 @@
 interface Cart {
   items: [{ 
     name: string;
-    quantity: number;
+    quantity: number | string;
   }],
   typeCheck?: (product: string, quantity: string) => string,
   addItem?: (product: string, quantity: string) => string,
-  saveToLocalStorage?: (note: number) => number,
+  saveToLocalStorage?: () => void,
   removeItem?: (product: string) => string,
 }
 
 // Cart constructor
-const Cart = function(items: void) {
+const Cart = function(items: [] = []) {
   this.items = items;
 };
-
-Cart.prototype.typeCheck = function(product, quantity){
-  const item = new CartItem(product, quantity);
-  if( typeof item.quantity === 'string'){
-    let quantity: string = item.quantity;
-  } else {
-    let quantity: number = item.quantity;
-  }
-}
 
 Cart.prototype.addItem = function(product, quantity) {
   const myCartItem = new CartItem(product, quantity);

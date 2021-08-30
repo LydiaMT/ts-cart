@@ -40,7 +40,7 @@ function addSelectedItemToCart(e) {
   let itemQuantity = e.target.quantity.value
   for(let item of catalogCart.items){
     if(item.name === itemName){
-      let currentCount = item.quantity;
+      let currentCount = parseInt(item.quantity as string);
       let additionalCount = parseInt(itemQuantity);
       item.quantity = currentCount + additionalCount;
       return;
@@ -55,7 +55,7 @@ function updateCounter() {
   cartTotal.textContent = `( ${counter} )`;
   for( let item of catalogCart.items ){
     console.log('item', item.quantity)
-    counter += item.quantity;
+    counter += parseInt(item.quantity as string);
   }
   return cartTotal.textContent = `( ${counter} )`;
 }

@@ -29,7 +29,7 @@ interface HTMLInputElement {
   "nodeType": number;
   "min": string;
   "max": string;
-  "valueAsNumber": number;
+  "value": string;
 };
 
 function showCart() {
@@ -54,7 +54,7 @@ function showCart() {
     // editQuantity.type = 'number';
     editQuantity.min = "1";
     editQuantity.max = "100";
-    editQuantity.valueAsNumber = item.quantity;
+    editQuantity.value = `${item.quantity}`;
     editQuantity.addEventListener('change', function(event){
       item.quantity = parseInt((event.target as HTMLInputElement).value);
       shoppingCart.saveToLocalStorage();
