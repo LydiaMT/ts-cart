@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Bus Mall Store</title>
+  <link rel="stylesheet" href="css/reset.css" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header>
+    <h1>Bus Mall Store</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="cart.html">Cart 🛒</a><span id="itemCount"></span></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section class="deck col-1">
+      <div class="card">
+        <header>
+          <h2>Your Cart</h2>
+        </header>
+        <div class="copy">
+          <ol>
+            <li>Click the ✖️ next to any item to remove it from your cart</li>
+          </ol>
+        </div>
+      </div>
+    </section>
+    <section class="deck col-1">
+      <div id="cart-container" class="cart-table">
+        <table id="cart">
+          <thead>
+            <tr>
+              <th>Remove</th>
+              <th>Item</th>
+              <th>Quantity</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+          <tfoot></tfoot>
+        </table>
+        <button id="empty-storage">Clear Cart</button>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <p>Vanilla Shopping Cart 2021</p>
+  </footer>
+  <script src='dist/app.js'></script>
+  <script src='dist/cart.js'></script>
+</body>
+</html>

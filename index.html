@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Bus Mall Store</title>
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Bus Mall Store</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="cart.html">Cart 🛒</a><span id="itemCount"></span></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section class="deck col-1">
+        <div class="card">
+          <header>
+            <h2>Shop Our Catalog</h2>
+          </header>
+          <div class="copy">
+            <ol>
+              <li>Select an item from our catalog and indicate how many you would like to purchase.</li>
+              <li>Once you've made your selection, click the "Add to Cart" button</li>
+              <li>When you are ready to purchase, click the "Cart" link above to view your cart and check out</li>
+            </ol>
+          </div>
+        </div>
+      </section>
+      <section class="deck col-2">
+        <div class="card">
+          <div class="copy">
+            <form id="catalog">
+              <fieldset>
+                <legend>Catalog</legend>
+                <label>
+                  <span>Item:</span>
+                  <select id="items"></select>
+                </label>
+                <label>
+                  <span>Quantity:</span>
+                  <input id="quantity" type="number" min="1" max="100" required/>
+                </label>
+                <input type="submit" value="Add To Cart" />
+              </fieldset>
+            </form>
+          </div>
+        </div>
+        <div class="cart-items" id="cartContents"></div>
+        <div class="cart-items" id="displayCart"></div>
+      </section>
+    </main>
+    <footer>
+      <p>Vanilla Shopping Cart 2021</p>
+    </footer>
+    <script src='dist/app.js'></script>
+    <script src='dist/catalog.js'></script>
+  </body>
+</html>
