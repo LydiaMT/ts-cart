@@ -1,8 +1,10 @@
 # Recreating Cart with TypeScript
+### [Deployed Site](https://lydiamt.github.io/ts-cart/index.html)
 
 Practice with TypeScript! Working to transform this [Vanilla JS shopping cart application](https://github.com/LydiaMT/vanilla-js-cart) into a TypeScript application.
 
-🛠 Currently under construction 🛠
+## TODO
+Add specificity to all functions
 
 ## Resources
 
